@@ -1,0 +1,99 @@
+#include<stdio.h>
+void main()
+{
+    int VeerZara = 100, Bahubali = 120, KGF = 100, HERO = 120, Spiderman = 120;
+    int money_made = 0, choice; 
+    int code=1234;
+    while (1==1)
+    {
+        printf("-------------------------------------------- \n");
+        printf("Welcome to BMS Patna \n");
+        printf("Choose a movie to make your day. \n");
+        printf("Press the Following numbers: \n");
+        printf("1 - VeerZara\n");
+        printf("2 - Bahubali\n");
+        printf("3 - KGF\n");
+        printf("4 - HERO\n");
+        printf("5 - Spiderman\n");
+        printf("-------------------------------------------- \n");
+            scanf("%d", &choice);
+
+        switch (choice)
+        {
+            case 1: 
+                printf("Booking for VeerZara\n"); 
+                        if(VeerZara > 0)
+                            {
+                                printf("Booked for VeerZara");
+                                money_made += 2; 
+                                VeerZara--;
+                            } 
+                        else
+                            printf("No seats left for VeerZara");  
+                        break;
+
+            case 2: 
+                printf("Booking for Bahubali\n"); 
+                        if(Bahubali > 0)
+                            {
+                                printf("Booked for Bahubali");
+                                money_made += 3; 
+                                Bahubali--;
+                            }
+                        else
+                            printf("No seats left for Bahubali"); 
+                        break; 
+            
+            case 3: 
+                printf("Booking for KGF\n"); 
+                        if(KGF > 0)
+                            {
+                                printf("Booked for KGF");
+                                money_made += 2; 
+                                KGF--;
+                            }
+                        else
+                            printf("No seats left for KGF"); 
+                        break;
+            
+            case 4: 
+                printf("Booking for HERO\n"); 
+                        if(HERO > 0)
+                            {
+                                printf("Booked for HERO");
+                                money_made += 2; 
+                                HERO--;
+                            }
+                        else
+                            printf("No seats left for HERO");
+                        break;
+            case 5: 
+                printf("Booking for Spiderman"); 
+                        if(Spiderman > 0)
+                            {
+                                printf("Booked for Spiderman");
+                                money_made += 2; 
+                                Spiderman--;
+                            }
+                        else
+                            printf("No seats left for Spiderman");
+                        break;
+            
+            case 100:    printf("Enter the Code.");
+                            scanf("%d", &code);
+
+                            if(code==1234)   {
+                                printf("Money Made: %d\n", money_made);
+                                printf("Tickets left in VeerZara: %d / 100\n", VeerZara);
+                                printf("Tickets left in Bahubali: %d / 120\n", Bahubali);
+                                printf("Tickets left in KGF: %d / 100\n", KGF);
+                                printf("Tickets left in Bahubali: %d / 120\n", HERO);
+                                printf("Tickets left in Spiderman: %d /120 \n", Spiderman);
+                                }
+                            else
+                               { printf("Wrong Input. Please try again");}
+                               break; 
+            default: printf("Wrong Input. Sorry Try again :( ");
+        }
+    }
+}
